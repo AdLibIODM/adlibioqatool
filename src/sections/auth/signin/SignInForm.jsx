@@ -116,7 +116,7 @@ export default function SignInForm() {
     } catch (error) {
       api["error"]({
         message: "Sign In Failed",
-        description: error,
+        description: error.response.data.error,
       });
     }
   };

@@ -87,7 +87,7 @@ export default function SignUpForm() {
     } catch (error) {
       api["error"]({
         message: "Sign Up Failed",
-        description: error,
+        description: error.response.data.error,
       });
     }
   };
